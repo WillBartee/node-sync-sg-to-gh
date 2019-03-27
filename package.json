@@ -1,0 +1,32 @@
+{
+  "name": "sync-sg2gh",
+  "version": "0.0.1",
+  "description": "Simple NodeJs script to sync the ingress rules of an AWS Security Group with the IP ranges published through Githubs' metadata api",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WillBartee/node-sync-sg-to-gh.git"
+  },
+  "keywords": [
+    "AWS",
+    "Github",
+    "security groups",
+    "Dev-ops",
+    "CI/CD"
+  ],
+  "author": "WillBartee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WillBartee/node-sync-sg-to-gh/issues"
+  },
+  "homepage": "https://github.com/WillBartee/node-sync-sg-to-gh#readme",
+  "dependencies": {
+    "aws-sdk": "^2.429.0",
+    "lodash": "^4.17.11",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7"
+  }
+}

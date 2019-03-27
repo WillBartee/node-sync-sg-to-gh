@@ -1,7 +1,7 @@
 'use strict';
 
 const _ = require('lodash');
-const rp = require('request-promise');
+const rp = require('request-promise-native');
 
 const GITHUB_METADATA_URL = 'https://api.github.com/meta';
 
@@ -57,7 +57,7 @@ function getEC2(options) {
 
 function getGithubMetaData() {
   log('Fetching the metadata from Github');
-  return require('./githubmetadata'); // for testing
+  return require('./test/githubmetadata'); // for testing
   return rp({
     method: 'GET',
     url: GITHUB_METADATA_URL,
