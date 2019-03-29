@@ -57,7 +57,6 @@ function getEC2(options) {
 
 function getGithubMetaData() {
   log('Fetching the metadata from Github');
-  return require('./test/githubmetadata'); // for testing
   return rp({
     method: 'GET',
     url: GITHUB_METADATA_URL,
@@ -142,7 +141,10 @@ if (require.main === module) {
     profileName: process.env.AWS_PROFILE
   })
     .then((/*results*/) => log('Completed!\n'))
-    .catch(err => log('ERROR => ', err));
+    .catch(err => {
+      log('ERROR => ', err);
+      return 147;
+    }).then(code => process.exit);
 }
 
 module.exports = main;
